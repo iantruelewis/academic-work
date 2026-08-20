@@ -1,0 +1,90 @@
+ilewis_Mod12_2.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link rel="stylesheet" href="ilewis_Mod12_2.css">
+    <script>
+        // JavaScript displays books in different orders
+        const books = [
+            "The War of Art - Steven Pressfield",
+            "Crossing the Unknown Sea - David Whyte",
+            "One Simple Thing - Eddie Stern",
+            "The Big Red Book - Rumi",
+            "Bhagavad Gita",
+            "Bird by Bird - Anne Lamott",
+            "Iron John - Robert Bly",
+            "The Artist's Way - Julia Cameron",
+            "Dune - Frank Herbert",
+            "Mistborn - Brandon Sanderson"
+        ];
+
+        function displayTopToBottom() {
+            let bookList = "";
+            for (let i = 0; i < books.length; i++) {
+                bookList += `<li>${books[i]}</li>`;
+            }
+            document.getElementById("book-list").innerHTML = bookList;
+        }
+
+        function displayBottomToTop() {
+            let bookList = "";
+            for (let i = books.length - 1; i >= 0; i--) {
+                bookList += `<li>${books[i]}</li>`;
+            }
+            document.getElementById("book-list").innerHTML = bookList;
+        }
+    </script>
+</head>
+<body>
+    <!-- Main container -->
+    <div id="container">
+        <!-- Title Header -->
+        <h1>Assignment 12.2: JavaScript - Part 4</h1>
+
+        <!-- Side-by-Side Divs -->
+        <div style="display: flex; justify-content: space-between;">
+            <!-- Left Div for Favorite Books -->
+            <div style="width: 45%;">
+                <h3>Top 10 Favorite Books In No Particular Order:</h3>
+                <ol id="book-list">
+                    <!-- Initial book list -->
+                    "The War of Art - Steven Pressfield",
+                    "Crossing the Unknown Sea - David Whyte",
+                    "One Simple Thing - Eddie Stern",
+                    "The Big Red Book - Rumi",
+                    "Bhagavad Gita",
+                    "Bird by Bird - Anne Lamott",
+                    "Iron John - Robert Bly",
+                    "The Artist's Way - Julia Cameron",
+                    "Dune - Frank Herbert",
+                    "Mistborn - Brandon Sanderson"
+                </ol>
+                <!-- Buttons for sorting -->
+                <button onclick="displayTopToBottom()">Top to Bottom</button>
+                <button onclick="displayBottomToTop()">Bottom to Top</button>
+            </div>
+
+            <!-- Right Div for Course Learnings -->
+            <div style="width: 45%;">
+                <h3>5 Things I’ve Learned Since the Course Started:</h3>
+                <ul>
+                    <li>How to write an index.html file</li>
+                    <li>How to write a site.css file</li>
+                    <li>How to connect a repository to GitHub pages</li>
+                    <li>How to create a basic web page</li>
+                    <li>How to merge GitHub branches</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Bottom Div with Link Back to Portal -->
+        <div style="width: 100%; margin-top: 60%;">
+            <a href="index.html" style="float: right;">Back to Portal</a>
+        </div>
+    </div>
+</body>
+</html>
