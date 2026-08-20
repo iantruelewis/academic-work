@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ian's Form</title>
+</head>
+<body>
+  <h1>Please Fill Out the Form</h1>
+  <form action="IanResponse.php" method="post">
+    <label>Full Name: <input type="text" name="name" required></label><br><br>
+
+    <label>Age: <input type="number" name="age" min="0" required></label><br><br>
+
+    <label>Email: <input type="email" name="email" required></label><br><br>
+
+    <label>Date of Birth: <input type="date" name="dob" required></label><br><br>
+
+    <label>Gender:</label><br>
+    <input type="radio" name="gender" value="Male" required> Male<br>
+    <input type="radio" name="gender" value="Female"> Female<br>
+    <input type="radio" name="gender" value="Other"> Other<br><br>
+
+    <label>Favorite Hobbies:</label><br>
+    <input type="checkbox" name="hobbies[]" value="Reading"> Reading<br>
+    <input type="checkbox" name="hobbies[]" value="Music"> Music<br>
+    <input type="checkbox" name="hobbies[]" value="Gaming"> Gaming<br>
+    <input type="checkbox" name="hobbies[]" value="Sports"> Sports<br><br>
+
+    <label>Tell us about yourself:<br>
+      <textarea name="bio" rows="4" cols="40" required></textarea>
+    </label><br><br>
+
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
