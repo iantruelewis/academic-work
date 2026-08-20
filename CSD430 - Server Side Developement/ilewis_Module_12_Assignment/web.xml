@@ -1,0 +1,10 @@
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee" version="3.1">
+  <display-name><lastname>_11</display-name>
+  <welcome-file-list>
+    <welcome-file>createTable.jsp</welcome-file>
+  </welcome-file-list>
+  <taglib>
+    <taglib-uri>user.tld</taglib-uri>
+    <taglib-location>/user.tld</taglib-location>
+  </taglib>
+</web-app>
